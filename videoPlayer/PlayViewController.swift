@@ -52,8 +52,6 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
     
     deinit {
         
-        playerItem.removeObserver(self, forKeyPath: "loadedTimeRanges")
-        
         playerItem.removeObserver(self, forKeyPath: "status")
     }
     
@@ -167,22 +165,20 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
     func playVideo(url: URL) {
         
         playerItem = AVPlayerItem(url: url)
-        // 监听缓冲进度改变
-        playerItem.addObserver(self, forKeyPath: "loadedTimeRanges", options: NSKeyValueObservingOptions.new, context: nil)
-        // 监听状态改变
-        playerItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
-        // 将视频资源赋值给视频播放对象
-        self.avplayer = AVPlayer(playerItem: playerItem)
-        // 初始化视频显示layer
-        playerLayer = AVPlayerLayer(player: avplayer)
-        // 设置显示模式
-        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-        playerLayer.contentsScale = UIScreen.main.scale
-        // 赋值给自定义的View
-        self.myPlayerView.playerLayer = self.playerLayer
-        // 位置放在最底下
-        self.myPlayerView.layer.insertSublayer(playerLayer, at: 0)
 
+        playerItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
+
+        self.avplayer = AVPlayer(playerItem: playerItem)
+
+        playerLayer = AVPlayerLayer(player: avplayer)
+
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
+        
+        playerLayer.contentsScale = UIScreen.main.scale
+
+        self.myPlayerView.playerLayer = self.playerLayer
+
+        self.myPlayerView.layer.insertSublayer(playerLayer, at: 0)
     }
     
     // MARK: KVO
@@ -190,12 +186,8 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         guard let playerItem = object as? AVPlayerItem else { return }
-        
-        if keyPath == "loadedTimeRanges"{
 
-            print("緩衝中...")
-        
-        } else if keyPath == "status" {
+        if keyPath == "status" {
 
             if playerItem.status == AVPlayerItemStatus.readyToPlay {
                 
@@ -204,9 +196,15 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
                 isPlaying = true
             
             } else {
-                print("加载异常")
+                
+                let alertController = UIAlertController(title: "Video fails to play", message: "", preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
             }
         }
     }
-
 }

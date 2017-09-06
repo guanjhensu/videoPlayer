@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		651E4D191F5FD15400CD13A7 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651E4D181F5FD15400CD13A7 /* PlayerViewController.swift */; };
 		6526CA2F1F5FC3EA00EB4379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526CA2E1F5FC3EA00EB4379 /* AppDelegate.swift */; };
 		6526CA361F5FC3EA00EB4379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6526CA351F5FC3EA00EB4379 /* Assets.xcassets */; };
 		6526CA391F5FC3EA00EB4379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6526CA371F5FC3EA00EB4379 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		651E4D181F5FD15400CD13A7 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		6526CA2B1F5FC3EA00EB4379 /* videoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = videoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6526CA2E1F5FC3EA00EB4379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6526CA351F5FC3EA00EB4379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 				6526CA3A1F5FC3EA00EB4379 /* Info.plist */,
 				6526CA411F5FC87200EB4379 /* MyPlayerView.swift */,
 				6526CA431F5FC91200EB4379 /* PlayViewController.swift */,
-				651E4D181F5FD15400CD13A7 /* PlayerViewController.swift */,
 			);
 			path = videoPlayer;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6526CA2F1F5FC3EA00EB4379 /* AppDelegate.swift in Sources */,
-				651E4D191F5FD15400CD13A7 /* PlayerViewController.swift in Sources */,
 				6526CA441F5FC91200EB4379 /* PlayViewController.swift in Sources */,
 				6526CA421F5FC87200EB4379 /* MyPlayerView.swift in Sources */,
 			);
