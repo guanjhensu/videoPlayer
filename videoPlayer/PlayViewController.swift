@@ -12,16 +12,24 @@ import AVFoundation
 class PlayViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: Property
-
-    var myPlayerView = MyPlayerView()
     
     var searchBar: UISearchBar = UISearchBar()
     
     let screenSize: CGRect = UIScreen.main.bounds
+
+    var myPlayerView = MyPlayerView()
     
-    var playerItem:AVPlayerItem!
-    var avplayer:AVPlayer!
-    var playerLayer:AVPlayerLayer!
+    var playerItem: AVPlayerItem = AVPlayerItem(url: URL(string: "forInitialSetting")!)
+    
+    var avplayer: AVPlayer = AVPlayer()
+    
+    var playerLayer: AVPlayerLayer = AVPlayerLayer()
+    
+    var playButton: UIButton = UIButton()
+    
+    var muteButton: UIButton = UIButton()
+    
+    var isPlaying: Bool = false
     
     // MARK: Life Cycle
     
@@ -31,6 +39,8 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
         setUpPlayerView()
         
         setUpSearchBar()
+        
+        setUpButton()
 
     }
     
@@ -66,6 +76,8 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
         
         searchBar.placeholder = "Enter URL of video"
         
+        searchBar.barTintColor = UIColor.black
+        
         searchBar.sizeToFit()
         
         searchBar.isTranslucent = true
@@ -76,6 +88,68 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
         
         self.view.addSubview(searchBar)
     }
+    
+    func setUpButton() {
+        
+        playButton = UIButton(frame: CGRect(x: 20, y: screenSize.height-31, width: 33, height: 19))
+        
+        playButton.setTitle("Play", for: .normal)
+        
+        playButton.setTitleColor(UIColor.white, for: .normal)
+        
+        playButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        
+        playButton.addTarget(self, action: #selector(self.playButtonClicked(sender:)), for: .touchUpInside)
+        
+        self.view.addSubview(playButton)
+        
+        muteButton = UIButton(frame: CGRect(x: screenSize.width-55, y: screenSize.height-31, width: 39, height: 19))
+        
+        muteButton.setTitle("Mute", for: .normal)
+        
+        muteButton.setTitleColor(UIColor.white, for: .normal)
+        
+        muteButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        
+        muteButton.addTarget(self, action: #selector(self.muteButtonClicked(sender:)), for: .touchUpInside)
+        
+        self.view.addSubview(muteButton)
+        
+    }
+    
+    // MARK: button clicked
+    
+    @objc func playButtonClicked(sender: UIButton!) {
+        
+        if !isPlaying {
+            
+            self.avplayer.play()
+            
+            isPlaying = true
+            
+            return
+        }
+        
+        self.avplayer.pause()
+        
+        isPlaying = false
+        
+    }
+    
+    @objc func muteButtonClicked(sender: UIButton!) {
+        
+        if !avplayer.isMuted {
+            
+            avplayer.isMuted = true
+            
+            return
+        }
+
+        avplayer.isMuted = false
+        
+    }
+    
+    // MARK: Search Bar
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
@@ -91,9 +165,6 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
     // MARK: AVPlayer
     
     func playVideo(url: URL) {
-
-//        guard let url = URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")
-//            else { fatalError("连接错误") }
         
         playerItem = AVPlayerItem(url: url)
         // 监听缓冲进度改变
@@ -121,13 +192,17 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
         guard let playerItem = object as? AVPlayerItem else { return }
         
         if keyPath == "loadedTimeRanges"{
-            // 缓冲进度 暂时不处理
-            print("later")
-        } else if keyPath == "status"{
-            // 监听状态改变
-            if playerItem.status == AVPlayerItemStatus.readyToPlay{
-                // 只有在这个状态下才能播放
+
+            print("緩衝中...")
+        
+        } else if keyPath == "status" {
+
+            if playerItem.status == AVPlayerItemStatus.readyToPlay {
+                
                 self.avplayer.play()
+                
+                isPlaying = true
+            
             } else {
                 print("加载异常")
             }
