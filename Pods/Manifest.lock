@@ -1,12 +1,15 @@
 PODS:
+  - Cartography (1.1.0)
   - SwiftLint (0.22.0)
 
 DEPENDENCIES:
+  - Cartography (= 1.1.0)
   - SwiftLint
 
 SPEC CHECKSUMS:
+  Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
   SwiftLint: 1134786caedd2caab0560d2f36b76414a5a56808
 
-PODFILE CHECKSUM: 03eda82360231c381bdf9e07f2c997db8cc67a0c
+PODFILE CHECKSUM: 2b9aaa91817012357adeb5e7e4d0f3df34564323
 
 COCOAPODS: 1.2.0
