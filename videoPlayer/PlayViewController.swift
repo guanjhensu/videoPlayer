@@ -9,42 +9,91 @@
 import UIKit
 import AVFoundation
 
-class PlayViewController: UIViewController {
+class PlayViewController: UIViewController, UISearchBarDelegate {
+    
+    // MARK: Property
 
     var myPlayerView = MyPlayerView()
+    
+    var searchBar: UISearchBar = UISearchBar()
+    
+    let screenSize: CGRect = UIScreen.main.bounds
     
     var playerItem:AVPlayerItem!
     var avplayer:AVPlayer!
     var playerLayer:AVPlayerLayer!
+    
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpPlayerView()
         
-        playVideo()
+        setUpSearchBar()
+
     }
     
-    deinit{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    deinit {
+        
         playerItem.removeObserver(self, forKeyPath: "loadedTimeRanges")
+        
         playerItem.removeObserver(self, forKeyPath: "status")
     }
+    
+    // MARK: Set Up
 
     func setUpPlayerView() {
         
-        let screenSize: CGRect = UIScreen.main.bounds
-        
         myPlayerView = MyPlayerView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
         
-        myPlayerView.backgroundColor = UIColor.white
+        myPlayerView.backgroundColor = UIColor.black
         
         self.view.addSubview(myPlayerView)
     }
     
-    func playVideo() {
+    func setUpSearchBar() {
+        
+        searchBar = UISearchBar(frame: CGRect(x: 8, y: 20, width: screenSize.width-16, height: 30))
+        
+        searchBar.searchBarStyle = UISearchBarStyle.prominent
+        
+        searchBar.placeholder = "Enter URL of video"
+        
+        searchBar.sizeToFit()
+        
+        searchBar.isTranslucent = true
+        
+        searchBar.backgroundImage = UIImage()
+        
+        searchBar.delegate = self
+        
+        self.view.addSubview(searchBar)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+        
+        if let videoUrl = searchBar.text,
+            let videoURL = URL(string: videoUrl) {
+            
+            playVideo(url: videoURL)
+        }
+    }
+    
+    // MARK: AVPlayer
+    
+    func playVideo(url: URL) {
 
-        guard let url = URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")
-            else { fatalError("连接错误") }
+//        guard let url = URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")
+//            else { fatalError("连接错误") }
         
         playerItem = AVPlayerItem(url: url)
         // 监听缓冲进度改变
@@ -64,6 +113,8 @@ class PlayViewController: UIViewController {
         self.myPlayerView.layer.insertSublayer(playerLayer, at: 0)
 
     }
+    
+    // MARK: KVO
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
