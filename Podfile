@@ -7,5 +7,6 @@ target 'videoPlayer' do
 
   # Pods for videoPlayer
   pod 'SwiftLint'
+  pod 'Cartography', '1.1.0'
 
 end

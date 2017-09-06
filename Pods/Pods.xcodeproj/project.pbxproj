@@ -7,33 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51EC8B0FC23D4EE7BFA8CDA3054333F9 /* Pods-videoPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF3F7F7ED200896D2344D2C10015CC /* Pods-videoPlayer-dummy.m */; };
-		AA979361217A13B6E1304B6361CA091D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		B0013FA46E5E2D698F20070C162FB047 /* Pods-videoPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3756583557ED38403462DF27ACFDC355 /* Pods-videoPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C1C6C0B246E3C5FDF06B2A0BB63F0D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4646A008995F65B714314BB74389F /* View.swift */; };
+		067B84F7E9EFBEAFDC824931CAAD2051 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE5AD224D2A5BDEC6023E985A36C3AB /* Align.swift */; };
+		1431619A2565DD8EAB817240E078707C /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A331EEFA12F82B3CD925D70ED5ACE01D /* LayoutProxy.swift */; };
+		22B60CFF6E57EB6DF8CCA5D2CAC3178C /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E596979DE558A9F39F4E4E9B61FA25B /* Priority.swift */; };
+		24EF682ACFF8F1CEA8BDDAA340220AC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3F2391D80C5AE124D6E13AD3FABFFE01 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C073DEFCD2B73E130BF590F42BBFDA4 /* Constrain.swift */; };
+		56EBA0C77344F63CA6A36265A6496A71 /* LayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F5F554A6BD22F34BDBFCDFF5F455FC /* LayoutSupport.swift */; };
+		5CAA19E0EB7CA9EB6047A3E43EC1FC8F /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF449521FE28AC791173348BF04759C /* ConstraintGroup.swift */; };
+		5F5D3FB5718F4673DC293DA7D97EF046 /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E15D9BF37B865EAE2D199859506D56 /* Compound.swift */; };
+		697414FCC3C6F8176768FFDDEC73A108 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345DE11072E28763C6A2EF0CE53E896 /* Expression.swift */; };
+		74BD0664EEC77366D314DA22DD4E721F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F674224C7B6DD6CF74A0FC8E705DBE /* Size.swift */; };
+		7965A04590F67375EC65249F774B3F6B /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2626A4EEBEA1EC808DF09F2ABB5E321 /* Distribute.swift */; };
+		88B21B225B2D6BFAB3F50B88495299F1 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912FEFFD89EEA7070E98F5B71596100 /* Point.swift */; };
+		922D26D07FD16EC54F3BCAEB11BDF887 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9B71D4856DF9CFE5715EDF4E5B3B2844 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9ACE0C54675390A87142606EC40463 /* ViewUtils.swift */; };
+		9C7E8D85506FA06C506A330B200FCEE7 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874EA12EED84503957420E654FF3B701 /* Context.swift */; };
+		A084DDD7233A950676D60FCB4FA8BE74 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665E772A564C5AFA17BD6FB39A2BEF86 /* Edges.swift */; };
+		A67286FF819C5C943D027E9C40DF456D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA46ED8908BC16A620BAAD6FECB6245 /* Extensions.swift */; };
+		A7BD4B74A484170A23FF6C7611A11B40 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4C914983EE71982BA4F4AB514199ED /* Property.swift */; };
+		AE7ACD648B84D1C8645049118FE42D54 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F297A734C73041CCCC9BA3DD11E0F /* Cartography-dummy.m */; };
+		C2E2993258D9072061A389E518053F8B /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C55563CAA06CCF638D15987D5CE788 /* Constraint.swift */; };
+		CD587D5E28B0428E3B4163F1604D26BF /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C94F460D5D22DE7D5DD7DBB626573 /* Edge.swift */; };
+		D845CABE1A5CAAED9C4C841483EBAEB4 /* Pods-videoPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF3F7F7ED200896D2344D2C10015CC /* Pods-videoPlayer-dummy.m */; };
+		DBC0D8FEB6A8101C977332E8BC16E641 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F29AAB883347181B3FE6D7EE79B514 /* Dimension.swift */; };
+		F45D0494A9FF00C9D4B28831CBBD41BD /* Pods-videoPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3756583557ED38403462DF27ACFDC355 /* Pods-videoPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC27B916EC313A166CE2704745CB14C0 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D535638CA7867B01135233DC8B8C27C1 /* Coefficients.swift */; };
+		FE4D13CA6A4999D13875761E5100C1A0 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BB3A5FBBCE6E7F0CD3482CFFAF7AEC /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		034B43AF5514DE3B0EC1D5AEB8F84F32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 544212980401A6DA7806F65EAD8C6637;
+			remoteInfo = Cartography;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2408FAEA4355A005DE9E093B9D61BCE8 /* Pods_videoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_videoPlayer.framework; path = "Pods-videoPlayer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E596979DE558A9F39F4E4E9B61FA25B /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
+		171C94F460D5D22DE7D5DD7DBB626573 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
+		17C55563CAA06CCF638D15987D5CE788 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
+		28E15D9BF37B865EAE2D199859506D56 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
+		2C5A95D6E3047454893EEA205B34C44C /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cartography.modulemap; sourceTree = "<group>"; };
+		2FA46ED8908BC16A620BAAD6FECB6245 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
 		3756583557ED38403462DF27ACFDC355 /* Pods-videoPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-videoPlayer-umbrella.h"; sourceTree = "<group>"; };
+		39BB3A5FBBCE6E7F0CD3482CFFAF7AEC /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
+		3C073DEFCD2B73E130BF590F42BBFDA4 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
+		3E4C914983EE71982BA4F4AB514199ED /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		407F297A734C73041CCCC9BA3DD11E0F /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
 		4689C5F81A3BF251259B777AEBA45FB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4912FEFFD89EEA7070E98F5B71596100 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
 		4E02D4EE0F836FD8DBE3F94092896429 /* Pods-videoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-videoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		5D807C72CCF93DEB2BEA37FCB9E91865 /* Pods_videoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_videoPlayer.framework; path = "Pods-videoPlayer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		665E772A564C5AFA17BD6FB39A2BEF86 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
 		6C708F4183B41E5B91CF0D2118504AA3 /* Pods-videoPlayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-videoPlayer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6CC4646A008995F65B714314BB74389F /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
 		6DFF3F7F7ED200896D2344D2C10015CC /* Pods-videoPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-videoPlayer-dummy.m"; sourceTree = "<group>"; };
+		76298CF2B8EB1DA03BCF97D0F6B0C738 /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
+		8345DE11072E28763C6A2EF0CE53E896 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		874EA12EED84503957420E654FF3B701 /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
+		8B72AC02C67108F4507B5499F0B32A77 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cartography.framework; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A7A67D3DDAED2808CD254DF7AE46671 /* Pods-videoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-videoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		A331EEFA12F82B3CD925D70ED5ACE01D /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+		A5F29AAB883347181B3FE6D7EE79B514 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
 		AA04E1C8C16D3BC4D38A7ACCFAB2D938 /* Pods-videoPlayer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-videoPlayer-resources.sh"; sourceTree = "<group>"; };
+		AC207821C7AFCF7DE11313683A117F91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF449521FE28AC791173348BF04759C /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
+		B2626A4EEBEA1EC808DF09F2ABB5E321 /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
 		B57267E97B8F5C2472E4FA17485191C9 /* Pods-videoPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-videoPlayer.modulemap"; sourceTree = "<group>"; };
 		BCED9026AE9FC887D2B93D9A809EF8F1 /* Pods-videoPlayer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-videoPlayer-frameworks.sh"; sourceTree = "<group>"; };
+		C5F674224C7B6DD6CF74A0FC8E705DBE /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CCE5AD224D2A5BDEC6023E985A36C3AB /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
+		D535638CA7867B01135233DC8B8C27C1 /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
 		DB48522AFF2791F02B194A2373C02DC9 /* Pods-videoPlayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-videoPlayer-acknowledgements.plist"; sourceTree = "<group>"; };
+		E6F5F554A6BD22F34BDBFCDFF5F455FC /* LayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSupport.swift; path = Cartography/LayoutSupport.swift; sourceTree = "<group>"; };
+		F74CA37FAEF84EBDE53FE1F791702C9E /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
+		FD9ACE0C54675390A87142606EC40463 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FCB9CBB794B80456CE6317C3B937EA5B /* Frameworks */ = {
+		5E373812231B9DC8DEFB385D61CD0AA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA979361217A13B6E1304B6361CA091D /* Foundation.framework in Frameworks */,
+				922D26D07FD16EC54F3BCAEB11BDF887 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4AAE12E09D29DA5F684C9BD8B5FE3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24EF682ACFF8F1CEA8BDDAA340220AC3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,12 +118,52 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		32A23E08346748F1793F899C5FF672C1 /* SwiftLint */ = {
+		166787A70F1997A2FFE9A5BE667886AB /* Cartography */ = {
 			isa = PBXGroup;
 			children = (
+				CCE5AD224D2A5BDEC6023E985A36C3AB /* Align.swift */,
+				D535638CA7867B01135233DC8B8C27C1 /* Coefficients.swift */,
+				28E15D9BF37B865EAE2D199859506D56 /* Compound.swift */,
+				3C073DEFCD2B73E130BF590F42BBFDA4 /* Constrain.swift */,
+				17C55563CAA06CCF638D15987D5CE788 /* Constraint.swift */,
+				AFF449521FE28AC791173348BF04759C /* ConstraintGroup.swift */,
+				874EA12EED84503957420E654FF3B701 /* Context.swift */,
+				A5F29AAB883347181B3FE6D7EE79B514 /* Dimension.swift */,
+				B2626A4EEBEA1EC808DF09F2ABB5E321 /* Distribute.swift */,
+				171C94F460D5D22DE7D5DD7DBB626573 /* Edge.swift */,
+				665E772A564C5AFA17BD6FB39A2BEF86 /* Edges.swift */,
+				8345DE11072E28763C6A2EF0CE53E896 /* Expression.swift */,
+				2FA46ED8908BC16A620BAAD6FECB6245 /* Extensions.swift */,
+				A331EEFA12F82B3CD925D70ED5ACE01D /* LayoutProxy.swift */,
+				E6F5F554A6BD22F34BDBFCDFF5F455FC /* LayoutSupport.swift */,
+				4912FEFFD89EEA7070E98F5B71596100 /* Point.swift */,
+				0E596979DE558A9F39F4E4E9B61FA25B /* Priority.swift */,
+				3E4C914983EE71982BA4F4AB514199ED /* Property.swift */,
+				C5F674224C7B6DD6CF74A0FC8E705DBE /* Size.swift */,
+				6CC4646A008995F65B714314BB74389F /* View.swift */,
+				FD9ACE0C54675390A87142606EC40463 /* ViewUtils.swift */,
+				A0FF7AC105C8045D260B6881E18D30C1 /* Support Files */,
 			);
-			name = SwiftLint;
-			path = SwiftLint;
+			name = Cartography;
+			path = Cartography;
+			sourceTree = "<group>";
+		};
+		2DF80CE59A245D2D5E132CA40BA82C96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				166787A70F1997A2FFE9A5BE667886AB /* Cartography */,
+				D2A75229B265BAF783A47948DB28FC8D /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		46FDAB0B4C68349A4A96C0CC98C4EFDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B72AC02C67108F4507B5499F0B32A77 /* Cartography.framework */,
+				5D807C72CCF93DEB2BEA37FCB9E91865 /* Pods_videoPlayer.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6312D0EF6011A103B296ECA6CD7AAADF /* Pods-videoPlayer */ = {
@@ -87,18 +197,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9758CC519AE2C57A9659FFC01AAD26F9 /* Pods */,
-				FA1C7E425DCA58572DCA1526F15D0FF1 /* Products */,
+				2DF80CE59A245D2D5E132CA40BA82C96 /* Pods */,
+				46FDAB0B4C68349A4A96C0CC98C4EFDD /* Products */,
 				13AF26A55BBA710D00AF6EDE179BCD3E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9758CC519AE2C57A9659FFC01AAD26F9 /* Pods */ = {
+		A0FF7AC105C8045D260B6881E18D30C1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				32A23E08346748F1793F899C5FF672C1 /* SwiftLint */,
+				2C5A95D6E3047454893EEA205B34C44C /* Cartography.modulemap */,
+				76298CF2B8EB1DA03BCF97D0F6B0C738 /* Cartography.xcconfig */,
+				407F297A734C73041CCCC9BA3DD11E0F /* Cartography-dummy.m */,
+				F74CA37FAEF84EBDE53FE1F791702C9E /* Cartography-prefix.pch */,
+				39BB3A5FBBCE6E7F0CD3482CFFAF7AEC /* Cartography-umbrella.h */,
+				AC207821C7AFCF7DE11313683A117F91 /* Info.plist */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Cartography";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -109,43 +225,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA1C7E425DCA58572DCA1526F15D0FF1 /* Products */ = {
+		D2A75229B265BAF783A47948DB28FC8D /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				2408FAEA4355A005DE9E093B9D61BCE8 /* Pods_videoPlayer.framework */,
 			);
-			name = Products;
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7A13B16D372F7840BEA3FA2CA3D3B6BB /* Headers */ = {
+		99E0DDD49871C2531731981D6B2F395E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0013FA46E5E2D698F20070C162FB047 /* Pods-videoPlayer-umbrella.h in Headers */,
+				F45D0494A9FF00C9D4B28831CBBD41BD /* Pods-videoPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E66E0C3AA6C50C06CA3BC63165901BDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE4D13CA6A4999D13875761E5100C1A0 /* Cartography-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		18DE8AE5FAEB9D635365D7DD4E035FC6 /* Pods-videoPlayer */ = {
+		32A6F9B9C489632A27E20620A73B2614 /* Pods-videoPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 426AE0310C7F65771D9ACA4EAA4E8DA1 /* Build configuration list for PBXNativeTarget "Pods-videoPlayer" */;
+			buildConfigurationList = 2311281AF46908751A1A3C85C1D87F44 /* Build configuration list for PBXNativeTarget "Pods-videoPlayer" */;
 			buildPhases = (
-				480B52315F1E10C4C14F96B15E98B1FC /* Sources */,
-				FCB9CBB794B80456CE6317C3B937EA5B /* Frameworks */,
-				7A13B16D372F7840BEA3FA2CA3D3B6BB /* Headers */,
+				1274B9CB2F91B203B4E1A04C5F08D07E /* Sources */,
+				5E373812231B9DC8DEFB385D61CD0AA6 /* Frameworks */,
+				99E0DDD49871C2531731981D6B2F395E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E156F0FDE8D780495296877E0E86779E /* PBXTargetDependency */,
+			);
+			name = "Pods-videoPlayer";
+			productName = "Pods-videoPlayer";
+			productReference = 5D807C72CCF93DEB2BEA37FCB9E91865 /* Pods_videoPlayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		544212980401A6DA7806F65EAD8C6637 /* Cartography */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4640A3FD22DAF78390468CA450BB29DA /* Build configuration list for PBXNativeTarget "Cartography" */;
+			buildPhases = (
+				F8A87B475BE2E0CA1FFEC5F03DEDB801 /* Sources */,
+				7A4AAE12E09D29DA5F684C9BD8B5FE3B /* Frameworks */,
+				E66E0C3AA6C50C06CA3BC63165901BDD /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-videoPlayer";
-			productName = "Pods-videoPlayer";
-			productReference = 2408FAEA4355A005DE9E093B9D61BCE8 /* Pods_videoPlayer.framework */;
+			name = Cartography;
+			productName = Cartography;
+			productReference = 8B72AC02C67108F4507B5499F0B32A77 /* Cartography.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -165,28 +307,67 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FA1C7E425DCA58572DCA1526F15D0FF1 /* Products */;
+			productRefGroup = 46FDAB0B4C68349A4A96C0CC98C4EFDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18DE8AE5FAEB9D635365D7DD4E035FC6 /* Pods-videoPlayer */,
+				544212980401A6DA7806F65EAD8C6637 /* Cartography */,
+				32A6F9B9C489632A27E20620A73B2614 /* Pods-videoPlayer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		480B52315F1E10C4C14F96B15E98B1FC /* Sources */ = {
+		1274B9CB2F91B203B4E1A04C5F08D07E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51EC8B0FC23D4EE7BFA8CDA3054333F9 /* Pods-videoPlayer-dummy.m in Sources */,
+				D845CABE1A5CAAED9C4C841483EBAEB4 /* Pods-videoPlayer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A87B475BE2E0CA1FFEC5F03DEDB801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				067B84F7E9EFBEAFDC824931CAAD2051 /* Align.swift in Sources */,
+				AE7ACD648B84D1C8645049118FE42D54 /* Cartography-dummy.m in Sources */,
+				FC27B916EC313A166CE2704745CB14C0 /* Coefficients.swift in Sources */,
+				5F5D3FB5718F4673DC293DA7D97EF046 /* Compound.swift in Sources */,
+				3F2391D80C5AE124D6E13AD3FABFFE01 /* Constrain.swift in Sources */,
+				C2E2993258D9072061A389E518053F8B /* Constraint.swift in Sources */,
+				5CAA19E0EB7CA9EB6047A3E43EC1FC8F /* ConstraintGroup.swift in Sources */,
+				9C7E8D85506FA06C506A330B200FCEE7 /* Context.swift in Sources */,
+				DBC0D8FEB6A8101C977332E8BC16E641 /* Dimension.swift in Sources */,
+				7965A04590F67375EC65249F774B3F6B /* Distribute.swift in Sources */,
+				CD587D5E28B0428E3B4163F1604D26BF /* Edge.swift in Sources */,
+				A084DDD7233A950676D60FCB4FA8BE74 /* Edges.swift in Sources */,
+				697414FCC3C6F8176768FFDDEC73A108 /* Expression.swift in Sources */,
+				A67286FF819C5C943D027E9C40DF456D /* Extensions.swift in Sources */,
+				1431619A2565DD8EAB817240E078707C /* LayoutProxy.swift in Sources */,
+				56EBA0C77344F63CA6A36265A6496A71 /* LayoutSupport.swift in Sources */,
+				88B21B225B2D6BFAB3F50B88495299F1 /* Point.swift in Sources */,
+				22B60CFF6E57EB6DF8CCA5D2CAC3178C /* Priority.swift in Sources */,
+				A7BD4B74A484170A23FF6C7611A11B40 /* Property.swift in Sources */,
+				74BD0664EEC77366D314DA22DD4E721F /* Size.swift in Sources */,
+				05C1C6C0B246E3C5FDF06B2A0BB63F0D /* View.swift in Sources */,
+				9B71D4856DF9CFE5715EDF4E5B3B2844 /* ViewUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E156F0FDE8D780495296877E0E86779E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = 544212980401A6DA7806F65EAD8C6637 /* Cartography */;
+			targetProxy = 034B43AF5514DE3B0EC1D5AEB8F84F32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		2D7A14E3A33FBC24455EF86105161A8F /* Debug */ = {
+		01261DA3C005CFD2FD70AB152BBC5410 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A7A67D3DDAED2808CD254DF7AE46671 /* Pods-videoPlayer.debug.xcconfig */;
 			buildSettings = {
@@ -215,46 +396,45 @@
 				PRODUCT_NAME = Pods_videoPlayer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		6B210EE71305C62112D9218805FBC006 /* Release */ = {
+		30F6D4CFCEE7E008157CA2DC27040F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E02D4EE0F836FD8DBE3F94092896429 /* Pods-videoPlayer.release.xcconfig */;
+			baseConfigurationReference = 76298CF2B8EB1DA03BCF97D0F6B0C738 /* Cartography.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-videoPlayer/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-videoPlayer/Pods-videoPlayer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_videoPlayer;
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cartography;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		9C7A5EE6DE2C3784BAA89D1A5D5EB30D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -340,9 +520,85 @@
 			};
 			name = Debug;
 		};
+		E66634B74731E191EAF3117E0877A34A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76298CF2B8EB1DA03BCF97D0F6B0C738 /* Cartography.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F06E5AD749A89BB851AF215E7ED47547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E02D4EE0F836FD8DBE3F94092896429 /* Pods-videoPlayer.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-videoPlayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-videoPlayer/Pods-videoPlayer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_videoPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2311281AF46908751A1A3C85C1D87F44 /* Build configuration list for PBXNativeTarget "Pods-videoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01261DA3C005CFD2FD70AB152BBC5410 /* Debug */,
+				F06E5AD749A89BB851AF215E7ED47547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -352,11 +608,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		426AE0310C7F65771D9ACA4EAA4E8DA1 /* Build configuration list for PBXNativeTarget "Pods-videoPlayer" */ = {
+		4640A3FD22DAF78390468CA450BB29DA /* Build configuration list for PBXNativeTarget "Cartography" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D7A14E3A33FBC24455EF86105161A8F /* Debug */,
-				6B210EE71305C62112D9218805FBC006 /* Release */,
+				30F6D4CFCEE7E008157CA2DC27040F88 /* Debug */,
+				E66634B74731E191EAF3117E0877A34A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,10 +12,10 @@ import AVFoundation
 class MyPlayerView: UIView {
 
     var playerLayer: AVPlayerLayer?
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         playerLayer?.frame = self.bounds
     }
 
