@@ -79,11 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				6526CA2E1F5FC3EA00EB4379 /* AppDelegate.swift */,
+				6526CA431F5FC91200EB4379 /* PlayViewController.swift */,
+				6526CA411F5FC87200EB4379 /* MyPlayerView.swift */,
 				6526CA351F5FC3EA00EB4379 /* Assets.xcassets */,
 				6526CA371F5FC3EA00EB4379 /* LaunchScreen.storyboard */,
 				6526CA3A1F5FC3EA00EB4379 /* Info.plist */,
-				6526CA411F5FC87200EB4379 /* MyPlayerView.swift */,
-				6526CA431F5FC91200EB4379 /* PlayViewController.swift */,
 			);
 			path = videoPlayer;
 			sourceTree = "<group>";

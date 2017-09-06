@@ -89,7 +89,7 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
     
     func setUpButton() {
         
-        playButton = UIButton(frame: CGRect(x: 20, y: screenSize.height-31, width: 33, height: 19))
+        playButton = UIButton(frame: CGRect(x: 20, y: screenSize.height-31, width: 50, height: 19))
         
         playButton.setTitle("Play", for: .normal)
         
@@ -101,7 +101,7 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
         
         self.view.addSubview(playButton)
         
-        muteButton = UIButton(frame: CGRect(x: screenSize.width-55, y: screenSize.height-31, width: 39, height: 19))
+        muteButton = UIButton(frame: CGRect(x: screenSize.width-75, y: screenSize.height-31, width: 60, height: 19))
         
         muteButton.setTitle("Mute", for: .normal)
         
@@ -125,12 +125,16 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
             
             isPlaying = true
             
+            playButton.setTitle("Pause", for: .normal)
+            
             return
         }
         
         self.avplayer.pause()
         
         isPlaying = false
+        
+        playButton.setTitle("Play", for: .normal)
         
     }
     
@@ -140,10 +144,14 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
             
             avplayer.isMuted = true
             
+            muteButton.setTitle("Unmute", for: .normal)
+            
             return
         }
 
         avplayer.isMuted = false
+        
+        muteButton.setTitle("Mute", for: .normal)
         
     }
     
@@ -194,6 +202,8 @@ class PlayViewController: UIViewController, UISearchBarDelegate {
                 self.avplayer.play()
                 
                 isPlaying = true
+                
+                playButton.setTitle("Pause", for: .normal)
             
             } else {
                 
